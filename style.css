@@ -1,0 +1,227 @@
+.container{
+    
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 3fr 3fr 0.8fr;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-areas: 
+    "menu menu menu menu"
+    " id details details details"
+    "Books Books Books Books"
+    "education education Contribution Contribution"
+    "publication publication publication publication"
+    "images images images images"
+    "achievements achievements achievements achievements"
+    "hobbies hobbies blogs blogs"
+    "contact contact contact contact";
+    grid-gap: 0.3rem;
+    height: 200vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+.menu{
+    background:#D9E4EC;
+    padding:10px;
+    grid-area: container;
+    top: 0;
+    height:8vh;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 225px;
+    position: fixed;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color:rgb(187, 19, 111);
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.menu a:hover 
+{
+    background-color:white;
+    border-right: 2px solid rgb(48, 232, 38);
+}  
+.menu .icon {
+    display: none;
+}
+
+.a1{
+    border: 10px;
+    padding: 11px;
+    text-decoration: solid;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.details{
+    background:#DBF5F0;
+    grid-area: details;
+    text-align:center;
+    padding: 100px;
+    font-size: larger;
+}
+.id{
+    background:#cbe6ea;
+    grid-area: id;
+}
+.id img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:380px ;
+    height:350px;
+    
+}
+.id p{
+    text-align: center;
+}
+.Books{
+    background: #dee6f0;
+    grid-area: Books;
+    text-align: center;
+    padding: 40px;
+}
+
+.education{
+    background:#cbe6ea;
+    grid-area: education;
+    text-align: center;
+    padding: 30px;
+    
+}
+.Contribution{
+    background:#cbe6ea;
+    grid-area: Contribution;
+    text-align: center;
+    padding: 30px;
+}
+.row:after {
+    content: "";
+    display: grid;
+    clear: both;
+}
+.column {
+    float: left;
+    height: 264px;
+    text-align: left;
+    padding: 16px;
+    background-color:#f7f7e6;
+    width: 264px;
+    margin: 1px;
+    
+  }
+a{
+    text-decoration:none;
+}
+a:hover{
+    color: rgba(126, 4, 43, 0.496);
+}
+.publication{
+    background: #cbe6ea;
+    grid-area: publication;
+    text-align: center;
+    padding: 2px;
+}
+
+.publication img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 75%;
+}
+
+.publication h4{
+    text-align: center;
+}
+
+.achievements{
+    background:#eeeeee;
+    grid-area: achievements;
+    line-height: 1.3;
+    padding: 10px;
+}
+
+.images{
+    background: #cbe6ea;
+    grid-area: images;
+    text-align: center;
+    padding: 2px;
+}
+.hobbies{
+    background: #cbe6ea;
+    grid-area: hobbies;
+    text-align: justify;
+    padding: 10px;
+    line-height: 2;
+}
+.blogs{
+    background:#eeeeee;
+    grid-area: blogs;
+    text-align: center;
+    padding: 10px;
+}
+
+.contact{
+    background:#D9E4EC;
+    grid-area: contact;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.contact a{
+    margin: 5px;
+}
+
+
+@media only screen and (max-width: 900px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas: 
+        "menu"
+        "id"
+        "details"
+        "Books"
+        "education"
+        "Contribution"
+        "publication"
+        "achievements"
+        "images"
+        "hobbies"
+        "blogs"
+        "contact";
+        gap:0.2em;
+    }
+    .menu{
+        right: 0;
+        padding: 15px;
+        font-size: 20px;
+        height: 85px;
+    }
+    .container a:not(:first-child) {
+        display:none;
+    }
+    .containe a.icon {
+        display: block;
+        padding: 10px;
+    }
+    .container.responsive {
+        position: relative;
+    }
+    .container.responsive .icon {
+        position: absolute;
+        right: 0;
+        top:17px;
+    }
+    .container.responsive a{
+        display: block;
+        text-align: right;
+        right: 0;
+    }
+}
